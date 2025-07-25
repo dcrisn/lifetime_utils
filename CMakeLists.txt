@@ -93,13 +93,6 @@ INSTALL(TARGETS lifetime_utils
     RUNTIME DESTINATION bin/
 )
 
-# Create the exports file; other projects, when package_find-ing
-# this project, can then import this exports file and get all the
-# exported targets.
-EXPORT(TARGETS lifetime_utils NAMESPACE tarp::
-    APPEND FILE ${PROJECT_BINARY_DIR}/${CMAKE_EXPORT_FILE}.cmake
-)
-
 # Some standard paths according to gnu guidelines
 include(GNUInstallDirs)
 
