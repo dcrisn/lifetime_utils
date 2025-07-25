@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+if (NOT TARGET tarp::lifetime_utils)
+  include(${CMAKE_CURRENT_LIST_DIR}/@CMAKE_EXPORT_FILE@.cmake)
+endif ()
+
+check_required_components(lifetime_utils)
+
