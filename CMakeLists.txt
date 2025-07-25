@@ -69,7 +69,7 @@ add_library(lifetime_utils INTERFACE
 add_library(tarp::lifetime_utils ALIAS lifetime_utils)
 
 target_include_directories(lifetime_utils INTERFACE
-    $<PUBLIC_INTERFACE:${CMAKE_SOURCE_DIR}/include/>
+    $<INSTALL_INTERFACE:include>
 )
 
 install(FILES
